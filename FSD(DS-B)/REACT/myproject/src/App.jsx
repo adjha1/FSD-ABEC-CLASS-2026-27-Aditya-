@@ -1,11 +1,11 @@
 import React from 'react'
-import Card from './components/Card'
+
+n
+
 const App = () => {
   return (
-    <div>
-      <Card />
-
-    </div>
+    <div>App</div>
   )
 }
+
 export default App

@@ -4,8 +4,14 @@ import Book from './components/Book'
 const App = () => {
   return (
     <div>
-      <Book name="aditya" />
-
+      <div style={{ display: 'flex', gap: '10px' }}>
+        <Book />
+        <br />
+        <Book />
+        <br />
+        <Book />
+        <br />
+      </div>
     </div>
   )
 }
