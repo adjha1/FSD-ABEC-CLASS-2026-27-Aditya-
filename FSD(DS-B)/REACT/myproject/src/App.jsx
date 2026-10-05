@@ -1,10 +1,25 @@
-import React from 'react'
+import { BrowserRouter, Link, Routes, Route } from 'react-router-dom'
 
-n
-
+function Home() {
+  return <h1>This is my Home Page</h1>
+}
+function About() {
+  return <h1>This is mt About Us Page</h1>
+}
 const App = () => {
   return (
-    <div>App</div>
+    <BrowserRouter>
+      <nav>
+        <Link to="/">HOME</Link>
+        <Link to="/about">ABOUT US</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
+
   )
 }
 

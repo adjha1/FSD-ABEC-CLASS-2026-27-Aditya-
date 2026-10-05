@@ -3,8 +3,10 @@ import Book from './components/Book'
 
 const App = () => {
   return (
-    <div>
-      <Book name="aditya" />
+    <div style={{ display: 'flex', gap: '10px' }}>
+      <Book name="C Language" price="700" />
+      <br />
+      <Book name="JAVA Book" price="1000" />
 
     </div>
   )
