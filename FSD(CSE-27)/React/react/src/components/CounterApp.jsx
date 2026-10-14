@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const CounterApp = () => {
     const [count, setCount] = useState(0);
     function inc() {
-        setCount(count + 1)
+        setCount((pre)=>(pre)+1)
     }
 
     return (

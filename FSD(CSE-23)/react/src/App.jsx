@@ -1,15 +1,9 @@
 import React from 'react'
-import Student from './components/Student'
-
+import CounterApp from './components/CounterApp'
 const App = () => {
   return (
     <div>
-      <Student />
-      <br />
-      <Student />
-      <br />
-      <Student />
-      <br />
+      <CounterApp />
     </div>
   )
 }

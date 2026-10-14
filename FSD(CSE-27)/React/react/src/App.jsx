@@ -1,35 +1,41 @@
-// import React from 'react'
-// import Student1 from './components/Student1'
-
-// const App = () => {
-//   return (
-//     <div>
-//       <h1> MY STUDENT RECORDS</h1>
-//       <div style={{ display: 'flex', gap: '20px', margin: '20px' }}>
-//         <Student1 />
-//         <br />
-//         <Student1 />
-//         <br />
-//         <Student1 />
-//         <br />
-//       </div>
-
-//     </div>
-//   )
-// }
-
-// export default App
-
-
-
-
-import React from 'react'
-import CounterApp from './components/CounterApp'
+import React, { useEffect, useState } from 'react'
 
 const App = () => {
+  const [formData, setformData] = useState({
+    name: '',
+    email: '',
+    password: ''
+  })
+
+  useEffect(() => {
+    console.log("form data update", formData);
+  }, [formData])
+
+  
+  const handleChange = (e) => {
+    setformData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("resitration Successfuly");
+    console.log(formData);
+  }
+
   return (
     <div>
-      <CounterApp />
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="name" placeholder='enter name' value={formData.name} onChange={handleChange} />
+        <br />
+        <input type="email" name="email" placeholder='enter email' value={formData.email} onChange={handleChange} />
+        <br />
+        <input type="password" name='password' placeholder='enter password' value={formData.password} onChange={handleChange} />
+        <br />
+        <button type='submit'>Registration</button>
+      </form>
     </div>
   )
 }
