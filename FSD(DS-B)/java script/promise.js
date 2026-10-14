@@ -1,18 +1,18 @@
 function f1() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log("hi!!!");
+            console.log("HI");
             resolve();
-        }, 4000)
+        }, 4000);
     })
-
 }
+
 function f2() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log("ABES COllege");
+            console.log(("ABES"))
             resolve();
-        }, 2000)
+        }, 1000)
     })
 }
 
