@@ -1,6 +1,7 @@
 console.log("task one");
+console.log("task two");
 setTimeout(() => {
-    console.log("task two");
-}, 200000);
-console.log("task three");
+    console.log("task therr");
+}, 2000000);
 console.log("task four");
+console.log("task five");
