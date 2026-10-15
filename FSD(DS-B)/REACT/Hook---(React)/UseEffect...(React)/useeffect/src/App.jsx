@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-
+import React, { useEffect, useState } from 'react'
 
 const App = () => {
   const [formData, setformData] = useState({
@@ -21,41 +20,19 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("ragistration successfuliy");
-    console.log(formData);
+    alert("resitration successfily");
+    console.log(formData)
   }
-
   return (
     <div>
       <form onSubmit={handleSubmit}>
-
-        <input type='text'
-          name="name"
-          placeholder='Enter your name'
-          value={formData.name}
-          onChange={handleChange}
-        />
+        <input type="text" name="name" placeholder='enter name' value={formData.name} onChange={handleChange} />
         <br />
+        <input type="email" name="email" placeholder='enter email' value={formData.email} onChange={handleChange} />
         <br />
-
-        <input type='email'
-          name="email"
-          placeholder='enter your email'
-          value={formData.email}
-          onChange={handleChange}
-
-        />
-        <br />
-        <br />
-        <input type='password'
-          name='password'
-          placeholder='enter your password'
-          value={formData.password}
-          onChange={handleChange}
-        />
+        <input type="password" name="password" placeholder='enter password' value={formData.password} onChange={handleChange} />
         <br />
         <button type='submit'>Registration</button>
-
       </form>
     </div>
   )
